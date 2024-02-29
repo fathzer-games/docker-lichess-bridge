@@ -17,14 +17,11 @@ That's all!
 
 If you need, you can see the lichess release information using the following command: ```docker run --rm --entrypoint=cat fathzer/lichess-bridge lib/versioning.yml```
 
-## What if my engine requires o software installation
-For example, we will suppose your engine requires the installation of Java.
-
+## What if my engine requires some software installation
 This image is based on [Alpine](https://www.alpinelinux.org/). You can install new software using the ```apk``` command.  
 For example to install java 11, the docker file would look like:  
 ```
 FROM fathzer/lichess-bridge
-MAINTAINER Jean-Marc Astesana <admin@fathzer.com>
 
 RUN apk add --no-cache openjdk11-jre
 ```
